@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import styled from 'react-emotion'
-import Home from './components/Home'
+import Home from './pages/Home'
 
 const Container = styled('div')`
   box-sizing: border-box;
@@ -15,7 +15,7 @@ const Container = styled('div')`
 const App = () => (
   <Router>
     <Container>
-      <Route path="/" component={Home} />
+      <Route path="/" exact={true} component={Home} />
     </Container>
   </Router>
 )
